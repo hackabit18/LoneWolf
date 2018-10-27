@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if current_user.preferences %}
+        <p>Welcome back, {{ current_user.username}} </p>
+    {% else %}
+    <p>Hi, {{ current_user.username }}! We see that this is your first time visiting us. Head over to the <a href="{{ url_for('chat') }}">Talk to Us</a> page to start a conversation!</p>
+    {% endif %}
+{% endblock %}
