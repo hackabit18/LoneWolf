@@ -1,0 +1,669 @@
+{
+  "rasa_nlu_data": {
+    "entity_synonyms": [
+      {
+        "value": "New York City",
+        "synonyms": ["NYC", "nyc", "the big apple"]
+      }
+    ],
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "hey",
+        "entities": []
+      },
+      {
+        "intent": "greet",
+        "text": "Hello. My name is",
+        "entities": []
+      },
+      {
+        "intent": "greet",
+        "text": "howdy",
+        "entities": []
+      },
+      {
+        "intent": "greet",
+        "text": "hey there",
+        "entities": []
+      },
+      {
+        "intent": "greet",
+        "text": "hello",
+        "entities": []
+      },
+      {
+        "intent": "greet",
+        "text": "hi",
+        "entities": []
+      },
+      {
+        "intent": "greet",
+        "text": "good morning",
+        "entities": []
+      },
+      {
+        "intent": "greet",
+        "text": "good evening",
+        "entities": []
+      },
+      {
+        "intent": "greet",
+        "text": "dear sir",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "no",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "not this one",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "not quite what I'm looking for",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "I don't like this one, it's too expensive",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "Somewhere else, perhaps?",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "I went there last time, it was not good",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "Not in the mood for that one",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "Not quite to my taste",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "Ugh, no!",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "Um, not really",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "I don't like that place",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "Suggest something else",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "Can't you find something better?",
+        "entities": []
+      },
+      {
+        "intent": "deny",
+        "text": "Are you sure there's nothing else?",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i'm looking for a place to eat",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to grab lunch",
+        "entities": [
+          {
+            "end": 20,
+            "start": 15,
+            "entity": "Cuisine",
+            "value": "Breakfast-Brunch"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to grab dinner",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to grab a bite",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to grab some lunch",
+        "entities": [
+          {
+            "end": 25,
+            "start": 20,
+            "entity": "Cuisine",
+            "value": "Breakfast-Brunch"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to grab some dinner",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I'm hungry",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Thinking of getting something to eat",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Feeling like eating",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Some food sounds great",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "How about some dinner?",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i am hungry",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i want to have some food",
+        "entities": []
+      }, 
+      {
+        "intent": "restaurant_search",
+        "text": "i'm looking for a place to eat",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I am searching for a dinner spot",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Get me a restaurant, somewhere low price",
+        "entities": [
+          {
+            "end": 34,
+            "start": 31,
+            "entity": "Price",
+            "value": "low"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Get me a restaurant, somewhere cheap",
+        "entities": [
+          {
+            "end": 36,
+            "start": 31,
+            "entity": "Price",
+            "value": "low"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Get me a restaurant, somewhere less pricey",
+        "entities": [
+          {
+            "end": 42,
+            "start": 31,
+            "entity": "Price",
+            "value": "low"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Get me a restaurant, somewhere inexpensive",
+        "entities": [
+          {
+            "end": 42,
+            "start": 31,
+            "entity": "Price",
+            "value": "low"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "A place to eat, somewhere cheap",
+        "entities": [
+          {
+            "end": 31,
+            "start": 26,
+            "entity": "Price",
+            "value": "low"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "An inexpensive restaurant",
+        "entities": [
+          {
+            "end": 14,
+            "start": 3,
+            "entity": "Price",
+            "value": "low"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to grab a quick bite to eat, something less pricey",
+        "entities": [
+          {
+            "end": 57,
+            "start": 46,
+            "entity": "Price",
+            "value": "low"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I'm looking for a light, low budget dinner",
+        "entities": [
+          {
+            "end": 35,
+            "start": 25,
+            "entity": "Price",
+            "value": "low"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i'm looking for an open restuarant",
+        "entities": [
+          {
+            "end": 23,
+            "start": 19,
+            "entity": "area",
+            "value": "open"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i feel like having some seafood",
+        "entities": [
+          {
+            "end": 31,
+            "start": 24,
+            "entity": "Cuisine",
+            "value": "seafood"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "show me chinese restaurants",
+        "entities": [
+          {
+            "end": 15,
+            "start": 8,
+            "entity": "Cuisine",
+            "value": "chinese"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "show me japanese restaurants",
+        "entities": [
+          {
+            "end": 16,
+            "start": 8,
+            "entity": "Cuisine",
+            "value": "japanese"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "show me a Mexican place in the centre",
+        "entities": [
+          {
+            "end": 37,
+            "start": 31,
+            "entity": "area",
+            "value": "centre"
+          },
+          {
+            "end": 17,
+            "start": 10,
+            "entity": "Cuisine",
+            "value": "mexican"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i am looking for an indian spot called olaolaolaolaolaola",
+        "entities": [
+          {
+            "end": 26,
+            "start": 20,
+            "entity": "Cuisine",
+            "value": "indian"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "search for restaurants",
+        "entities": []
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "anywhere that serves alcohol",
+        "entities": [
+          {
+            "end": 28,
+            "start": 21,
+            "entity": "alcohol",
+            "value": "Full_Bar"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "somewhere with booze",
+        "entities": [
+          {
+            "end": 20,
+            "start": 15,
+            "entity": "alcohol",
+            "value": "Full_Bar"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "somewhere that serves wine",
+        "entities": [
+          {
+            "end": 26,
+            "start": 22,
+            "entity": "alcohol",
+            "value": "Wine-Beer"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "somewhere that serves wine",
+        "entities": [
+          {
+            "end": 26,
+            "start": 22,
+            "entity": "alcohol",
+            "value": "Wine-Beer"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "me and the boys are going out for beer",
+        "entities": [
+          {
+            "end": 38,
+            "start": 34,
+            "entity": "Cuisine",
+            "value": "bar_pub_brewery"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "get me some place with no alcohol",
+        "entities": [
+          {
+            "end": 31,
+            "start": 23,
+            "entity": "alcohol",
+            "value": "No_Alcohol_Served"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i'm trying to quit drinking, so no booze",
+        "entities": [
+          {
+            "end": 40,
+            "start": 32,
+            "entity": "alcohol",
+            "value": "No_Alcohol_Served"
+          }
+        ]
+      },    
+      {
+        "intent": "restaurant_search",
+        "text": "i'm trying to quit smoking, so no smoking area",
+        "entities": [
+          {
+            "end": 40,
+            "start": 32,
+            "entity": "smoking_area",
+            "value": "not permitted"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I am looking for asian fusion food",
+        "entities": [
+          {
+            "end": 29,
+            "start": 17,
+            "entity": "Cuisine",
+            "value": "asian fusion"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i am looking for mexican food",
+        "entities": [
+          {
+            "end": 24,
+            "start": 17,
+            "entity": "Cuisine",
+            "value": "mexican"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "indian restaurant",
+        "entities": [
+          {
+            "end": 6,
+            "start": 0,
+            "entity": "Cuisine",
+            "value": "regional"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "show me Japanese restaurants",
+        "entities": [
+          {
+            "end": 16,
+            "start": 8,
+            "entity": "Cuisine",
+            "value": "japanese"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I'm in the mood for some Japanese",
+        "entities": [
+          {
+            "end": 33,
+            "start": 25,
+            "entity": "Cuisine",
+            "value": "japanese"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to have Japanese food",
+        "entities": [
+          {
+            "end": 23,
+            "start": 15,
+            "entity": "Cuisine",
+            "value": "japanese"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Japanese restaurants",
+        "entities": [
+          {
+            "end": 8,
+            "start": 0,
+            "entity": "Cuisine",
+            "value": "japanese"
+          }
+        ]
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "Japanese restaurants",
+        "entities": [
+          {
+            "end": 8,
+            "start": 0,
+            "entity": "Cuisine",
+            "value": "japanese"
+          }
+        ]
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "good bye",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "stop",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "end",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "farewell",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "Bye bye",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "have a good one",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "Great choice, thanks!",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "Thanks, buddy!",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "Thank you",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "You're a lifesaver, thanks!",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "That sounds great, thanks",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "just what I was looking for",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "Bulls eye! Yay",
+        "entities": []
+      },
+      {
+        "intent": "goodbye",
+        "text": "That's it for now",
+        "entities": []
+      }
+
+    ]
+  }
+}
+
