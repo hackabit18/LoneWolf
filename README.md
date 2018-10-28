@@ -1,7 +1,7 @@
 # LoneWolf
-
 # Restaurant Assistant
 
+# Idea
 Our vision was to build a personal assistant who would locate and select the perfect place to eat for you based on your 
 preferences. No need to look through the menus or the locations. No cause for checking your budget. No problems of looking up 
 several sites and restaurant apps. We aimed to make this mundane process into an interactive and enjoyable one through our bot, 
@@ -16,9 +16,10 @@ manner or in a casual way as well. We have included functionality so that our sk
 “I am hungry” also. Our assistant will give you varied responses so that you feel like you are having an actual conversation 
 instead of speaking with a bot.
 
-Tools and Technologies: Python, RASA_NLU, Flask, HTML, CSS, Bootstrap, Alexa Skill Kit, AWS Lambda, Zulip API, ngrok
+# Tools and Technologies:
+Python, RASA_NLU, Flask, HTML, CSS, Bootstrap, Alexa Skill Kit, AWS Lambda, Zulip API, ngrok
 
-Steps:
+# Steps to run:
 1. Clone the repo.
 2. Run the following commands to setup a virtual environment and install all requirements.
 ```
@@ -45,8 +46,11 @@ flask run
 ```
 Also, run an ngrok https server and provide that link as a webhook on the facebook developer portal to make a messenger bot.
 
+# Future Work
 Some added features that we hope to implement in the near future would be multilingual service, because we wouldn’t want your 
 experience to be limited. We also want to incorporate a large database with restaurants from various countries for customer 
 satisfaction. Currently, our skill supports conversation in the English language and the database has restaurants in Mexico and
 a few of BIT Mesra.
 
+# License
+https://github.com/hackabit18/LoneWolf/blob/master/LICENSE
