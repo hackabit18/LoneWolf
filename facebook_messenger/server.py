@@ -1,7 +1,11 @@
-from flask import render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for
 from logic import *
 
 app = Flask(__name__)
+FB_API_URL = 'https://graph.facebook.com/v2.6/me/messages'
+VERIFY_TOKEN = "VERQNJNEKJNN*%$&8t47hxfcjksds"
+PAGE_ACCESS_TOKEN = "EAAKYjSpIZBloBAP8l0MjwSIAYFPfiyqXxDuVx8ZCgNXJwEnmtYRMnFpd43hzGdCvag33NgncTSVFoBmhoYBSPHbvrTW5qNbheHS76ZAhZBahTgskZBS9UNSZCqwnTp7FthLEAsRr9K6uu8G70OD4Qa1fyxW2Q3m8f7TeNBvW7adzSuhHtePyzC"
+
 
 def verify_webhook(req):
     if req.args.get("hub.verify_token")==VERIFY_TOKEN:

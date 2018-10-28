@@ -1,6 +1,3 @@
-import re, pandas as pd, numpy as np
-from flask import Flask, request, redirect
-import requests
 import sqlite3
 import json
 import random
@@ -8,11 +5,11 @@ from rasa_nlu.training_data import load_data
 from rasa_nlu.config import RasaNLUModelConfig
 from rasa_nlu.model import Trainer
 
-FB_API_URL = 'https://graph.facebook.com/v2.6/me/messages'
-VERIFY_TOKEN = "VERQNJNEKJNN*%$&8t47hxfcjksds"
-PAGE_ACCESS_TOKEN = "EAAKYjSpIZBloBAP8l0MjwSIAYFPfiyqXxDuVx8ZCgNXJwEnmtYRMnFpd43hzGdCvag33NgncTSVFoBmhoYBSPHbvrTW5qNbheHS76ZAhZBahTgskZBS9UNSZCqwnTp7FthLEAsRr9K6uu8G70OD4Qa1fyxW2Q3m8f7TeNBvW7adzSuhHtePyzC"
+config = RasaNLUModelConfig(configuration_values = {"pipeline":[{ "name": "nlp_spacy" },{ "name": "tokenizer_spacy" },
+                                                   { "name": "intent_entity_featurizer_regex" },{ "name": "intent_featurizer_spacy"},
+                                                   { "name": "ner_crf" },{ "name": "ner_synonyms" },{ "name": "intent_classifier_sklearn" },
+                                                   { "name": "ner_spacy" }]})
 
-config = RasaNLUModelConfig(configuration_values = {"pipeline":"spacy_sklearn"})
 trainer = Trainer(config)
 training_data = load_data("training_data.json")
 interpreter = trainer.train(training_data)
@@ -50,6 +47,7 @@ def find_hotels(params, excluded):
     return data
     
 def bot_answer(intent):
+    global response
     if intent=='greet':
         response = "Hello to you too!"
     if intent=='goodbye':
@@ -60,18 +58,20 @@ def bot_answer(intent):
     return response
 
 def respond(message, params, suggestions, excluded):
+    print(message)
     parse_data = interpreter.parse(message)
     intent = parse_data["intent"]["name"]    
     entities = parse_data["entities"]
     if intent == "greet" or intent=="goodbye":
         global response, adr
+        print(response)
         if 'Can I help you' in response:
             return 'Please specify some other choices!', '', {}, [], [], intent
         response = bot_answer(intent)
         return response, adr, {}, [], [], intent
     if intent == "deny":
         global response
-        if 'Can I help you' in response:
+        if 'Can I help you' in response or 'Please specify' in response:
             return bot_answer('goodbye'), '', {}, [], [], intent
         excluded.extend(suggestions)
     for ent in entities:
@@ -93,8 +93,6 @@ def respond(message, params, suggestions, excluded):
 
 def get_bot_response(message):
     #Call the respond function 
-    global params, suggestions, excluded
+    global params, suggestions, excluded, response, adr
     response, adr, params, suggestions, excluded, intent = respond(message, params, suggestions, excluded)
-    params = params
-    suggestions = suggestions
     return response, intent
